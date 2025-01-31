@@ -7,6 +7,7 @@ import Community from './pages/Community';
 import Contacts from './pages/Contacts';
 import Header from './component/Header/Header';
 import './App.css'
+import Footer from './component/Footer/Footer';
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
   <Route path="/community" element={<Community />} />
   <Route path="/contacts" element={<Contacts />} />
 </Routes>
+
+<Footer />
+
 
     </>
   );

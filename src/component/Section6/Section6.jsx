@@ -13,8 +13,8 @@ const Section6 = () => {
                     <button>Вступить в чат <img src="./clik.png" alt="" /></button>
                 </div>
                     <div className={s.phone}>
-                        <img src="./Phone1.png" alt="" />
-                        <img src="./Phone2.png" alt="" />
+                        <img src="./telefoni.png" alt="" />
+                        
                     </div>
             </div>
         </div>

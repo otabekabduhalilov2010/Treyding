@@ -17,6 +17,7 @@ const reviews = [
 const Section7 = () => {
   return (
     <section className={styles.section}>
+      <div className="container">
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>
           <span className={styles.highlight}>ОТЗЫВЫ</span> О КУРСЕ
@@ -35,6 +36,7 @@ const Section7 = () => {
         ))}
       </div>
       <button className={styles.button}>Все отзывы →</button>
+      </div>
     </section>
   );
 };

@@ -16,7 +16,9 @@ const steps = [
 
 const Section4 = () => {
   return (
-    <section className={s.section}>
+  <>
+  <div className="container">
+  <section className={s.section}>
       <div className={s.header}>
         <h2 className={s.title}>КАК НАЧАТЬ</h2>
         <h3 className={s.subtitle}>УСПЕШНО ТОРГОВАТЬ НА ФОНДОВОМ РЫНКЕ</h3>
@@ -31,6 +33,9 @@ const Section4 = () => {
         ))}
       </div>
     </section>
+  </div>
+  
+  </>
   );
 };
 

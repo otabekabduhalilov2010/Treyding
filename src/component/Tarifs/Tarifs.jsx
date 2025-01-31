@@ -12,7 +12,7 @@ const Tarifs = () => {
         <div className="container">
             <div className={s.wrap}>
              {Data.map(item => (
-                <Card title={item.title} text={item.text} image={item.image} />
+                <Card key={item.id} title={item.title} text={item.text} image={item.image} />
              ))}
             </div>
         </div>
