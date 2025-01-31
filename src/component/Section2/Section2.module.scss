@@ -1,0 +1,44 @@
+.wrap {
+    background-image: url(./lineya.png);
+    filter: brightness(1.6);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 2000px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 100px;
+
+    h1 {
+        
+        font-size: 70px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+   
+}
+
+.text {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+    p {
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+.igor {
+   height: 1100px;
+   align-items: center;
+   width: 700px;
+   filter: brightness(1.0);
+}

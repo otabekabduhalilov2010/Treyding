@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    justify-content: space-around;
+   
+    
+    button {
+        background-color: #070610;
+        border: 1px solid #00FFB2;
+        width: 160px;
+        height: 44px;
+        border-radius: 10px;
+        color: #00FFB2;
+        cursor: pointer;
+    }
+}
+
+.link {
+    display: flex;
+    gap: 30px;
+    
+
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            scale: 1.1;
+            transition: 0.5s;
+            color: #00FFB2;
+          }
+    }
+}
