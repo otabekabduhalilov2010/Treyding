@@ -1,31 +1,239 @@
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s;
+    span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: white;
+        border-radius: 10px;
+        transition: all 0.3s;
+    }
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Меню на весь экран */
+.fullscreenMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.fullscreenMenu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreenMenu a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.fullscreenMenu a:hover {
+    color: #00FFB2;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .link {
+        display: none;
+    }
+}
+
+
+
 .menu {
     display: flex;
     justify-content: space-around;
-   
-    
-    button {
-        background-color: #070610;
-        border: 1px solid #00FFB2;
-        width: 160px;
-        height: 44px;
-        border-radius: 10px;
-        color: #00FFB2;
-        cursor: pointer;
-    }
+    margin-top: 30px;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
 }
 
 .link {
     display: flex;
     gap: 30px;
-    
+    flex-wrap: wrap;
+}
 
-    a {
-        text-decoration: none;
+.link a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.link a:hover {
+    scale: 1.1;
+    color: #00FFB2;
+}
+
+.slk a {
+    text-decoration: none;
+    background-color: #070610;
+    border: 1px solid #00FFB2;
+    width: 160px;
+    height: 44px;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .link {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .slk a {
+        width: 140px;
+        height: 40px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        margin-bottom: 50px;
+    }
+    .link {
+        gap: 10px;
+    }
+    .slk a {
+        width: 130px;
+        height: 38px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        margin-bottom: 30px;
+    }
+    .link {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .slk a {
+        width: 120px;
+        height: 36px;
+        padding: 6px;
+    }
+}
+
+
+
+/* Ссылки для ПК-версии */
+.link {
+    display: flex;
+    gap: 30px;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.link a:hover {
+    color: #00FFB2;
+}
+
+/* Скрываем бургер в ПК-версии */
+.burger {
+    display: none;
+}
+
+/* Fullscreen Menu */
+.fullscreenMenu {
+    display: none;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .link {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .fullscreenMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
+    .fullscreenMenu.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .fullscreenMenu a {
         color: white;
-        &:hover {
-            scale: 1.1;
-            transition: 0.5s;
-            color: #00FFB2;
-          }
+        font-size: 2rem;
+        text-decoration: none;
+        margin: 20px 0;
+        transition: color 0.3s;
+    }
+
+    .fullscreenMenu a:hover {
+        color: #00FFB2;
     }
 }

@@ -1,0 +1,170 @@
+.section {
+   
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  
+  
+  .wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    background: #14141a;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    transition: 0.3s;   
+    width: 300px;
+
+
+    img {
+       width: 100%; 
+    }
+  }
+  
+  .card:hover {
+    border-color: #2bf6a6;
+  }
+  .card1:hover {
+    border-color: #2bf6a6;
+  }
+  
+  .button {
+    display: block;
+    background: #a020f0;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.3s;
+    
+  }
+ 
+  
+  .price {
+    font-size: 24px;
+    color: #2bf6a6;
+    font-weight: bold;
+  }
+  
+  .features {
+    margin: 16px 0;
+    color: #cfcfcf;
+  }
+  
+  
+  
+  .button:hover {
+    background: #8000ff;
+  }
+  
+  .footerText {
+    font-size: 14px;
+    color: #999;
+    margin-top: 20px;
+  }
+  
+
+  .card1 {
+    background: #14141a;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    transition: 0.3s;   
+    width: 300px;
+
+
+    img {
+       width: 100%; 
+    }
+
+
+    .button {
+        display: block;
+        background: #a020f0;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 300;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-top: 80px;
+      }
+  }
+  
+
+  /* Адаптивность для .wrap и .card */
+@media (max-width: 1024px) {
+  .wrap {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+  }
+
+  .card, .card1 {
+      width: 100%;
+      padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+      padding: 40px 10px;
+  }
+
+  .wrap {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+  }
+
+  .card, .card1 {
+      padding: 16px;
+  }
+
+  .price {
+      font-size: 20px;
+  }
+
+  .button {
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+      padding: 30px 5px;
+  }
+
+  .wrap {
+      grid-template-columns: 1fr;
+      gap: 8px;
+  }
+
+  .card, .card1 {
+      width: 90%;
+      margin: 0 auto;
+      padding: 12px;
+  }
+
+  .price {
+      font-size: 18px;
+  }
+
+  .button {
+      padding: 8px;
+      font-size: 12px;
+  }
+}
